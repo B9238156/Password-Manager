@@ -137,6 +137,13 @@ public class DatabaseHandler {
         return false;
     }
 
+    
+    /**
+     * insert a new password for the current user
+     * @param ID
+     * @param Password
+     * @return true if successful or false if failed
+     */
     public boolean addPassword(String owner, String name, String userId, String password, String description) {
 
         String encryptPass = Encryption.encrypt(password, secretKey, salt);
@@ -156,7 +163,12 @@ public class DatabaseHandler {
         }
         return false;
     }
-
+    /**
+     * update the information for the current password
+     * @param ID
+     * @param Password
+     * @return true if successful or false if failed
+     */
     public boolean savePassword(Integer id, String name, String userId, String password, String description) {
 
         String encryptPass = Encryption.encrypt(password, secretKey, salt);
@@ -182,7 +194,11 @@ public class DatabaseHandler {
         return false;
     }
 
-
+    /**
+     * delete the password 
+     * @param ID
+     * @return true if successful or false if failed
+     */
     public boolean deletePassword(Integer id) {
 
         String deleteSQL = "DELETE FROM PASSWORDTABLE WHERE ID = " + id;
@@ -226,6 +242,13 @@ public class DatabaseHandler {
            return true;
         }
     }
+
+    /**
+     * Return a list of passwords and the fields for the current user
+     * @param currentUser
+     * @param Password
+     * @return List of passwords or empty list
+     */
     public ObservableList<Passwords> getPasswords(String currentUser) throws SQLException {
         //List<Passwords> myPasswords = new LinkedList<Passwords>();
         ObservableList<Passwords> myPasswords = FXCollections.observableArrayList();
