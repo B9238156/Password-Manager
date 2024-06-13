@@ -1,0 +1,87 @@
+#button{
+    -fx-max-width: infinity;
+    -fx-background-color: #4D4D4D;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size:14px;
+}
+
+#mainBox {
+    -fx-background-color: #FAFAFA;
+    -fx-border-color: #616161;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+}
+#companyLogo{
+    -fx-font-size: 15px;
+    -fx-font-family: "Arial Black";
+    -fx-fill: #818181;
+    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+.button{
+    -fx-cursor: hand;
+}
+
+.custom-text-field {
+    -fx-background-color:
+            #FFFFFF,
+            #FFFFFF;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 0, 0;
+}
+
+
+
+.custom-text-field:focused {
+    -fx-background-color:
+            #616161,
+            #FFFFFF;
+}
+
+.custom-text-field:hover {
+    -fx-background-color:
+            #909090,
+            #FFFFFF;
+}
+
+.custom-text-field:focused:hover {
+    -fx-background-color:
+            #616161,
+            #FFFFFF;
+}
+
+
+
+.new-custom-text-field {
+    -fx-background-color:
+            #FFFFFF,
+            #FFFFFF;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 0, 0;
+    -fx-font-size: 15px;
+    -fx-font-family: "Arial Black";
+    -fx-fill: #818181;
+    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+
+
+.new-custom-text-field:focused {
+    -fx-background-color:
+            #616161,
+            #FFFFFF;
+}
+
+.new-custom-text-field:hover {
+    -fx-background-color:
+            #909090,
+            #FFFFFF;
+}
+
+.new-custom-text-field:focused:hover {
+    -fx-background-color:
+            #616161,
+            #FFFFFF;
+}

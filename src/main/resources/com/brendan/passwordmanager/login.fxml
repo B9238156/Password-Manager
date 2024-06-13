@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.PasswordField?>
+
+<VBox id="mainBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="425.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.brendan.passwordmanager.LoginController">
+    <children>
+        <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="67.0" prefWidth="419.0" spacing="40.0">
+            <children>
+            <ImageView fitHeight="67.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Logo.png" />
+               </image>
+            </ImageView>
+                <Label id="companyLogo" alignment="CENTER" contentDisplay="TOP" prefHeight="32.0" prefWidth="205.0" stylesheets="@style.css" text="Password Manager" textAlignment="CENTER" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            </children>
+        </HBox>
+      <HBox maxWidth="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="425.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="206.0" text="User ID" underline="true" />
+            <Label alignment="CENTER" prefHeight="44.0" prefWidth="157.0" text="Password" underline="true" />
+         </children>
+      </HBox>
+        <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="425.0" spacing="10.0" styleClass="innerBox" stylesheets="@style.css">
+            <children>
+                <TextField id="cus" fx:id="userName" prefHeight="25.0" prefWidth="159.0" styleClass="new-custom-text-field" stylesheets="@style.css" text="" />
+            <PasswordField fx:id="password" prefHeight="25.0" prefWidth="161.0" styleClass="new-custom-text-field" stylesheets="@style.css" text="" />
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="84.0" prefWidth="425.0" spacing="20.0">
+            <children>
+                <Button id="button" defaultButton="true" mnemonicParsing="false" onAction="#login" stylesheets="@style.css" text="Login" />
+                <Button id="button" cancelButton="true" mnemonicParsing="false" onAction="#exitSystem" stylesheets="@style.css" text="Exit" />
+            </children>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="10.0" />
+    </padding>
+</VBox>
