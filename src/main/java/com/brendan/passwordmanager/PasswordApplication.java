@@ -31,7 +31,11 @@ public class    PasswordApplication extends Application {
         loadData();
         launch();
     }
-
+    
+    /**
+     * Pre-Load the user database with one record
+     * Future would allow multiple users
+     */
     public static void loadData()  {
         handler.addUser("brendan", "1234") ;
     }
