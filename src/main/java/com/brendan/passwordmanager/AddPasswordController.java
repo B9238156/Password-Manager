@@ -47,8 +47,11 @@ public class AddPasswordController {
      */
     public void addPassword() throws IOException, SQLException, InvalidAlgorithmParameterException, NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException {
 
+        
+        // Get current user from hidden field
         String userName = currentUserName.getText();
-  //          if (DatabaseHandler.handler.addPassword("brendan", Name.getText(), ID.getText(), Password.getText(), Description.getText())) {
+
+        // Add the new password
         if (DatabaseHandler.handler.addPassword(userName, Name.getText(), ID.getText(), Password.getText(), Description.getText())) {
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -61,6 +64,8 @@ public class AddPasswordController {
                 alert.setHeaderText("Fail!");
                 alert.showAndWait();
             }
+
+        // Close the window and then re-open the list of password window
             Stage stage = (Stage) cancelButton.getScene().getWindow();
             stage.close();
 
@@ -89,20 +94,20 @@ public class AddPasswordController {
      */
     public void cancel() throws IOException {
 
+        // Get current user from hidden field
         String userName = currentUserName.getText();
 
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
+        
         // Create a new stage (window)
         Stage newWindow = new Stage();
         newWindow.setTitle("Welcome " + userName);
 
-
-        // Load the FXML document
+        // Load the FXML document that has the list of passwords
         Parent root = FXMLLoader.load(getClass().getResource("myPasswords.fxml"));
 
-
-        // Set the scene
+        // Setup to re-show the list of passwords window
         Scene scene = new Scene(root);
         newWindow.setScene(scene);
         TextField userNameTxt = (TextField) root.lookup("#currentUserName");
