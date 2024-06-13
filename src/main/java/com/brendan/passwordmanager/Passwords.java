@@ -1,5 +1,11 @@
 package com.brendan.passwordmanager;
 
+
+
+/**
+ * Password object that has the fields 
+ 
+ */
 public class Passwords {
 
     public String getId() {
