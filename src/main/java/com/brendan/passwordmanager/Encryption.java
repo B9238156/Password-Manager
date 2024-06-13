@@ -91,7 +91,7 @@ public class Encryption {
         }
     }
 
-
+// Test method.  Not used by main program
     public static void main(String[] args) {
 
         // Define your secret key and salt (keep these secure and don't hardcode in production)
