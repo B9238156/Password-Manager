@@ -45,9 +45,11 @@ public class EditPasswordController {
      * @throws SQLException
      */
     public void savePassword() throws IOException, SQLException, InvalidAlgorithmParameterException, NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException {
-
+        
+        // Get current user from hidden field
         String userName = currentUserName.getText();
 
+        // Save the updates for the current password
         if (DatabaseHandler.handler.savePassword(Integer.valueOf(currentId.getText()), currentName.getText(), currentUserId.getText(), currentPassword.getText(), currentDescription.getText())) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setContentText("Password was Successfully Saved!");
@@ -59,6 +61,8 @@ public class EditPasswordController {
             alert.setHeaderText("Fail!");
             alert.showAndWait();
         }
+
+        // Close the window and then re-open the list of password window
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
 
